@@ -16,12 +16,18 @@ Tempoary file storage demo app powered by UserApp, Python (Tornado) and AngularJ
     
 *Edit the line where it says `APP_ID = 'YOUR_APP_ID'` with your app id ([locate it](https://help.userapp.io/customer/portal/articles/1322336-how-do-i-find-my-app-id-)).*
 
-  3) Run the server
+  3) Install library dependencies
+  
+    $ pip install zipfile
+    $ pip install tornado
+    $ pip install userapp -pre
+  
+  4) Run the server
   
     $ chmod +x server.py
     $ ./server.py
     
-  4) Visit the address mentioned in the console
+  5) Visit the address mentioned in the console
 
 *If you haven't changed the port it should be running on [http://localhost:31415/](http://localhost:31415/)*
 
