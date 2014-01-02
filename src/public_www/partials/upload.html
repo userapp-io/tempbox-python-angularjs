@@ -1,0 +1,11 @@
+<input id="file-control" type="file" ng-model-instant multiple />
+
+<div id="dropbox" class="dropbox" ng-class="dropClass">
+    <span>{{dropText}}</span>
+
+    <small ng-show="fileUrl != null"><a href="{{fileUrl}}">{{fileUrl}}</a></small>
+
+    <div class="progress-bar" ng-show="files.length">
+        <div class="uploaded" ng-style="{'width': progress+'%'}"></div>
+    </div>
+</div>
