@@ -1,8 +1,14 @@
 function UploadController($scope, fileService) {
-    var dropbox = document.getElementById("dropbox");
+    var dropbox = document.getElementById('dropbox');
 
     $scope.fileUrl = null;
     $scope.dropText = 'Drop files here...';
+    $scope.files = [];
+
+    fileService.list(function(error, list) {
+        $scope.list = list;
+        $scope.$apply();
+    });
     
     function dragEnterLeave(event) {
         event.stopPropagation();
@@ -13,10 +19,10 @@ function UploadController($scope, fileService) {
         });
     }
 
-    dropbox.addEventListener("dragenter", dragEnterLeave, false);
-    dropbox.addEventListener("dragleave", dragEnterLeave, false);
+    dropbox.addEventListener('dragenter', dragEnterLeave, false);
+    dropbox.addEventListener('dragleave', dragEnterLeave, false);
 
-    dropbox.addEventListener("dragover", function (event) {
+    dropbox.addEventListener('dragover', function (event) {
         event.stopPropagation();
         event.preventDefault();
         
@@ -28,7 +34,7 @@ function UploadController($scope, fileService) {
         });
     }, false);
 
-    dropbox.addEventListener("drop", function (event) {
+    dropbox.addEventListener('drop', function (event) {
         var files = event.dataTransfer.files || [];
 
         event.stopPropagation();
@@ -62,10 +68,10 @@ function UploadController($scope, fileService) {
                     });
                 },
                 failed: function (event) {
-                    alert("There was an error attempting to upload the file.");
+                    alert('There was an error attempting to upload the file.');
                 },
                 canceled: function (event) {
-                    alert("The upload has been canceled by the user or the browser dropped the connection.");
+                    alert('The upload has been canceled by the user or the browser dropped the connection.');
                 }
             });
         }

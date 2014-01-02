@@ -3,13 +3,16 @@
 <head>
   <meta charset="utf-8">
   <title>Tempbox</title>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
+  <h1 ng-show="!user.authorized" class="fa fa-cloud-upload"></h1>
+  <div ng-show="user.authorized" gravatar-image data-gravatar-email="user.email" data-gravatar-size="80"></div>
   <h2>Tempbox</h2>
   
   <div class="menu" ng-show="user.authorized">
-    Logged in as <strong>{{user.login || user.email}}</strong> | <a href="#/login" ua-logout>log out</a>
+    Logged in as <strong>{{user.login || user.email}}</strong> | <a href="#/login" ua-logout>Log out</a>
   </div>
 
   <div ng-view></div>
@@ -21,14 +24,14 @@
   <script src="lib/angular/angular-route.js"></script>
   <script src="js/app.js"></script>
 
+  <script src="js/services/services.js"></script>
   <script src="js/services/fileservice.js"></script>
+  <script src="js/services/md5-service.js"></script>
+  <script src="js/controllers/controllers.js"></script>
   <script src="js/controllers/uploadcontroller.js"></script>
-
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
+  <script src="js/directives/directives.js"></script>
+  <script src="js/directives/gravatar-directive.js"></script>
   <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
-
 
   <script src="https://app.userapp.io/js/userapp.client.js"></script>
   <script src="js/angularjs.userapp.js"></script>

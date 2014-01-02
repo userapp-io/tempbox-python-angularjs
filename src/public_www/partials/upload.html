@@ -9,3 +9,12 @@
         <div class="uploaded" ng-style="{'width': progress+'%'}"></div>
     </div>
 </div>
+
+<div>
+	<table class="file-list">
+		<tr ng-repeat="file in list">
+			<td>{{ file.created_at | relativeTime }}</td>
+			<td><a href="{{ file.file_url }}">{{ file.file_url }}</a></td>
+		</tr>
+	</table>
+</div>

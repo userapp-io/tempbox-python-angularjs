@@ -1,10 +1,13 @@
 <p>Please log in</p>
 
 <form ua-login ua-error="error-msg">
-	<input name="login" placeholder="Username"><br>
+	<input name="login" placeholder="Username" type="text"><br>
 	<input name="password" placeholder="Password" type="password"><br>
-	<p><button type="submit">Log in</button> or <a href="" ua-oauth-link="github">Log in with GitHub</a></p>
-	<p id="error-msg"></p>
+	<p>
+		<button type="submit">Log in</button><br>
+		<button ua-oauth-link="github">Log in with GitHub</button>
+	</p>
+	<p id="error-msg" class="error"></p>
 </form>
 
 <p><a href="#/signup">Sign up</a></p>

@@ -1,18 +1,94 @@
 /* app css stylesheet */
 
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+body {
+  font-family: Ubuntu;
+  color: #555;
+  text-align: center;
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 62px;
+  margin-bottom: 0;
+  color: #59c9f4;
+}
+h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.gravatar-icon {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+  -webkit-transition: all 0.0.5s linear;
+  -moz-transition: all 0.05s linear;
+  -o-transition: all 0.05s linear;
+  transition: all 0.05s linear;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 300px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  background: #f1f1f1;
+  padding: 11px 13px;
+  margin-bottom: 10px;
+  box-shadow: none;
+  line-height: 21px;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+button {
+  display: inline-block;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  color: white;
+  text-shadow: none;
+  box-shadow: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: 'Ubuntu';
+  -webkit-transition: all 0.0.5s linear;
+  -moz-transition: all 0.05s linear;
+  -o-transition: all 0.05s linear;
+  transition: all 0.05s linear;
+  padding: 9px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  background: #59c9f4;
+  width: 326px;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+.error {
+  color: #ef313f;
+}
+
 .menu {
   list-style: none;
-  border-bottom: 0.1em solid black;
   margin-bottom: 2em;
   padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
 }
 
 .menu > li {
@@ -45,26 +121,23 @@ table { border-collapse: collapse; }
     border-image: initial;
 }
 .dropbox {
-    width: 20em;
-    min-height: 3em;
-    border: 2px solid #DDD;
-    border-radius: 8px;
-    background-color: #FEFFEC;
-    text-align: center;
-    color: #BBB;
-    font-size: 2em;
-    font-family: Arial, sans-serif;
+  display: inline-block;
+  padding: 40px 145px;
+  background-color: #ddd;
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+  box-shadow: inset 1px 1px 3px 1px rgba(0,0,0,0.45);
 }
 
 .dropbox small {
-  position: relative;
-  top: -15px;
-  font-size: 0.5em;
-}
-
-.dropbox span {
-    margin-top: 0.9em;
-    display: block;
+  font-size: 12px;
+  text-transform: none;
+  width: 100%;
+  display: block;
+  text-decoration: underline;
+  margin-top: 10px;
 }
 
 .dropbox.not-available {
@@ -77,4 +150,15 @@ table { border-collapse: collapse; }
 
 #file-control {
    display: none;
+}
+
+.file-list {
+  padding-top: 50px;
+  width: 730px;
+  display: inline-block;
+  font-size: 12px;
+}
+.file-list td {
+  text-align: left;
+  min-width: 120px;
 }

@@ -1,6 +1,7 @@
 import os
 
 # Your UserApp AppId
+# https://help.userapp.io/customer/portal/articles/1322336-how-do-i-find-my-app-id-
 APP_ID = 'YOUR_APP_ID'
 
 # Which port to host the server on

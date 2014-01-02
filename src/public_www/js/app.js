@@ -6,7 +6,9 @@ var app = angular.module('tempbox', [
 	'tempbox.services',
 	'tempbox.directives',
 	'tempbox.controllers',
-	'UserApp'
+	'UserApp',
+	'md5',
+	'ui-gravatar'
 ]).
 config(function($routeProvider) {
 	$routeProvider.when('/login', {templateUrl: 'partials/login.html', public: true, login: true});
