@@ -11,7 +11,7 @@ Tempoary file storage demo app powered by UserApp, Python (Tornado) and AngularJ
   
   2) Update the configuration with your app ID
   
-    $ cd tempbox-python-angularjs-master/
+    $ cd tempbox-python-angularjs-master/src/
     $ vim config.py
     
 *Edit the line where it says `APP_ID = 'YOUR_APP_ID'` with your app id.*
