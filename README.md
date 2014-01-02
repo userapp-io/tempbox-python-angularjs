@@ -9,7 +9,7 @@ Tempoary file storage demo app powered by UserApp, Python (Tornado) and AngularJ
   
     $ wget -qO- -O ua-tmp.zip https://github.com/userapp-io/tempbox-python-angularjs/archive/master.zip && unzip ua-tmp.zip && rm ua-tmp.zip
   
-  2) Update the configuration with your app ID
+  2) Update the configuration with your app id
   
     $ cd tempbox-python-angularjs-master/
     $ vim config.py
