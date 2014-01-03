@@ -1,7 +1,7 @@
 Tempbox / Python
 ================================
 
-Tempoary file storage demo app powered by UserApp, Python (Tornado) and AngularJS.
+Temporary file storage demo app powered by UserApp, Python (Tornado) and AngularJS.
 
 ### Launching the demo app
 
