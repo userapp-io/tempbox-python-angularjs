@@ -27,7 +27,7 @@ Temporary file storage demo app powered by UserApp, Python (Tornado) and Angular
   
     $ pip install zipfile
     $ pip install tornado
-    $ pip install userapp -pre
+    $ pip install userapp --pre
   
   4) Run the server
   
