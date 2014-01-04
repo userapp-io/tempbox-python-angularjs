@@ -7,6 +7,7 @@ var app = angular.module('tempbox', [
 	'tempbox.directives',
 	'tempbox.controllers',
 	'UserApp',
+	'Scope.safeApply',
 	'md5',
 	'ui-gravatar'
 ]).
